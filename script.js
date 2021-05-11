@@ -18,5 +18,8 @@ btnRoll.addEventListener('click', function() {
 	// 1.generate random dice roll
 	const dice = Math.trunc(Math.random() * 6) + 1;
 	// 2. display dice
+	diceEl.classList.remove('hidden');
+	diceEl.src = `dice-${dice}.png`;
+
 	// 3. check for dice 1: if true switch to next player
 });
