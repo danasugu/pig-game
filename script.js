@@ -31,7 +31,7 @@ btnRoll.addEventListener('click', function() {
 		// currentScore = currentScore + dice;
 		currentScore += dice;
 		current0El.textContent = currentScore;
-		// switch to next player
+		// loose score and switch to next player
 	} else {
 	}
 });
