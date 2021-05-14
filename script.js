@@ -1,7 +1,8 @@
 'use strict';
 
 // selecting elements
-const score0El = document.querySelector('#score--0');
+// const score0El = document.querySelector('#score--0');
+const score0El = document.getElementById('score--0');
 const score1El = document.getElementById('score--1');
 const current0El = document.getElementById('current--0');
 const current1El = document.getElementById('current--1');
@@ -32,8 +33,12 @@ btnRoll.addEventListener('click', function() {
 		// add dice number to current score
 		// currentScore = currentScore + dice;
 		currentScore += dice;
-		current0El.textContent = currentScore;
-		// loose all score and switch to next player
+		//not '' but ``
+		document.getElementById(`current--${activePlayer}`).textContent = currentScore;
+		// current0El.textContent = currentScore;
 	} else {
+		// loose all score and switch to next player
+		//ternary operator
+		activePlayer = activePlayer === 0 ? 1 : 0;
 	}
 });
